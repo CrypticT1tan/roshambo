@@ -32,7 +32,7 @@ class GUI:
         # Setup Frames
         self.setup_frames()
 
-    def center_root(self):
+    def center_root(self) -> None:
         """
         Centers the root window using the screen size and window size
         """
@@ -50,7 +50,7 @@ class GUI:
         self.root.geometry("%dx%d+%d+%d" % (window_width, window_height, x, y)) # Adds x and y offsets to window dims
         self.root.resizable(width=False, height=False) # Prevent window from being resizable
 
-    def setup_frames(self):
+    def setup_frames(self) -> None:
         """
         Sets up the frames for each component of the GUI window
         """
@@ -60,7 +60,7 @@ class GUI:
         self.setup_computer_frame() # Everything inside the "Computer" section
         self.setup_choice_frame() # The button choices for the user to pick at the bottom of window
 
-    def setup_text_frame(self):
+    def setup_text_frame(self) -> None:
         """
         Sets up the game text frame (sets max score and displays round information)
         """
@@ -69,7 +69,7 @@ class GUI:
         self.game_text = tk.Label(text_frame, text=f"Best of {self.best_of}", font=(self.font, 40, "bold"), justify="center")
         self.game_text.grid(row=0, column=0, columnspan=3)
 
-    def setup_user_frame(self):
+    def setup_user_frame(self) -> None:
         """
         Sets up the user side of the screen
         """
@@ -82,7 +82,7 @@ class GUI:
         self.user_choice = tk.Label(user_frame, text="", width=5, height=2, font=(self.font, self.choice_size, "bold"), justify="center")
         self.user_choice.grid(row=2, column=0)
 
-    def setup_vs_frame(self):
+    def setup_vs_frame(self) -> None:
         """
         Sets up the vs (middle) of the screen
         """
@@ -91,7 +91,7 @@ class GUI:
         vs_label = tk.Label(vs_frame, text="VS", font=(self.font, 30, "bold"), justify="center")
         vs_label.grid(row=0, column=0, padx=20)
 
-    def setup_computer_frame(self):
+    def setup_computer_frame(self) -> None:
         """
         Sets up the computer side of the screen
         """
@@ -104,7 +104,7 @@ class GUI:
         self.computer_choice = tk.Label(computer_frame, text="", width=5, height=2, font=(self.font, self.choice_size, "bold"), justify="center")
         self.computer_choice.grid(row=2, column=0)
 
-    def setup_choice_frame(self):
+    def setup_choice_frame(self) -> None:
         """
         Sets up the choice frame and the widgets inside to let user pick their choice
         """
@@ -122,7 +122,7 @@ class GUI:
                                     command=lambda: self.update_score(self.choices[2]))
         scissors_button.grid(row=1, column=2, padx=10, pady=2)
 
-    def update_score(self, user_choice):
+    def update_score(self, user_choice) -> None:
         """
         Updates the score of the user and computer given their choices
         :param user_choice: the user's choice in the game
@@ -151,14 +151,14 @@ class GUI:
         if self.game_over(): # Check if either player has reached the best of 3
             self.play_again()
 
-    def game_over(self):
+    def game_over(self) -> bool:
         """
         Checks if the current game is over
         :return: True if the max score has been reached, otherwise False
         """
         return self.user_score == self.best_of - 1 or self.computer_score == self.best_of - 1
 
-    def reset(self):
+    def reset(self) -> None:
         """
         Resets the game when the user wants to play again
         """
@@ -170,7 +170,7 @@ class GUI:
         self.user_score_label.config(text=f"Score: {self.user_score}")
         self.computer_score_label.config(text=f"Score: {self.computer_score}")
 
-    def play_again(self):
+    def play_again(self) -> None:
         """
         Prompt the user and ask them if they want to play again
         """
