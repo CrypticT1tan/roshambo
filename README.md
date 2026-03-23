@@ -1,6 +1,12 @@
 # ROSHAMBO
 A Rock-Paper-Scissors game made with the Python Tkinter library, complete with sound effects.
 
+## FEATURES 🌟
+- Classic Rock-Paper-Scissors rules, best of 3 rounds
+- Sound effects for when you win or lose a round
+- Unlimited play (can choose to play another game or quit)
+- A computer player that serves as your opponent and picks a random choice alongside you
+
 ## INSTALLATION ⚙️
 
 ## USAGE 🔧
