@@ -8,6 +8,10 @@ A Rock-Paper-Scissors game made with the Python Tkinter library, complete with s
 - A computer player that serves as your opponent and picks a random choice alongside you
 
 ## INSTALLATION ⚙️
+Clone the repository while in your desired directory/folder:
+'''bash
+git clone https://github.com/CrypticT1tan/roshambo.git
+'''
 
 ## USAGE 🔧
 
