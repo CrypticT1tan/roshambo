@@ -1,4 +1,4 @@
-# ROSHAMBO
+# ROSHAMBO 🪨📝✂️
 A Rock-Paper-Scissors game made with the Python Tkinter library.
 
 ## FEATURES 🌟
