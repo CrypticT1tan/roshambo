@@ -9,9 +9,9 @@ A Rock-Paper-Scissors game made with the Python Tkinter library, complete with s
 
 ## INSTALLATION ⚙️
 Clone the repository while in your desired directory/folder:
-'''bash
+```bash
 git clone https://github.com/CrypticT1tan/roshambo.git
-'''
+```
 
 ## USAGE 🔧
 
