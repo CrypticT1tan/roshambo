@@ -28,6 +28,7 @@ python -m venv .venv
 Use package manager pip to install the following:
 
 ```bash
+pip install playsound3
 pip install pyinstaller
 ```
 
