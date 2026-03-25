@@ -3,9 +3,9 @@ A Rock-Paper-Scissors game made with the Python Tkinter library, complete with s
 
 ## FEATURES 🌟
 - Classic Rock-Paper-Scissors rules, best of 3 rounds
-- Sound effects for when you win or lose a round
 - Unlimited play (can choose to play another game or quit)
 - A computer player that serves as your opponent and picks a random choice alongside you
+- Sound effects for when you win or lose a round (COMING SOON)
 
 ## INSTALLATION ⚙️
 Clone the repository while in your desired directory/folder:
