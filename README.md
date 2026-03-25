@@ -13,41 +13,15 @@ Clone the repository while in your desired directory/folder:
 git clone https://github.com/CrypticT1tan/roshambo.git
 ```
 
-Create and activate a virtual environment:
-MacOS:
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-Windows:
-```bash
-python -m venv .venv
-.venv\Scripts\activate.bat
-```
-
-Use package manager pip to install the following:
-
-```bash
-pip install playsound3
-pip install pyinstaller
-```
-
-To build the executable file, use the terminal to go into the same directory as the main.py file and run the command below:
-
-MacOS:
-```bash
-pyinstaller main.py --hidden-import=tkinter --onefile --windowed --add-data "../assets:assets" --icon=../assets/roshambo.icns --name "Roshambo"
-```
-Windows:
-```bash
-pyinstaller main.py --hidden-import=tkinter --onefile --windowed --add-data "../assets;assets" --icon=../assets/roshambo.ico --name "Roshambo"
-```
-
-Open up the dist file to find an executable file with your desired name, and open it.
-
-To deactivate the virtual environment, just type "deactivate" into the console/terminal.
+You now have all the files needed to run the project.
 
 ## USAGE 🔧
+The rules work exactly the same as Rock-Paper-Scissors:
+- Rock 🪨 beats Scissors ✂️
+- Paper 📝 beats Rock 🪨
+- Scissors ✂️ beats Paper 📝
+
+Choose between the 🪨, 📝, and ✂️ buttons at the very bottom of the window to proceed. The computer will randomly choose one of those three, and the winner for the round will be determined by the rules. 
 
 ## CONTACT 📞
 For any questions, contact me at gavinkiosco@gmail.com via email or cryptict1tan on Discord.
