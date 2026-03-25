@@ -33,6 +33,15 @@ pip install pyinstaller
 
 To build the executable file, use the terminal to go into the same directory as the main.py file and run the command below:
 
+MacOS:
+```bash
+pyinstaller main.py --hidden-import=tkinter --onefile --windowed --add-data "../assets:assets" --icon=../assets/roshambo.icns --name "Roshambo"
+```
+Windows:
+```bash
+pyinstaller main.py --hidden-import=tkinter --onefile --windowed --add-data "../assets;assets" --icon=../assets/roshambo.ico --name "Roshambo"
+```
+
 Open up the dist file to find an executable file with your desired name, and open it.
 
 To deactivate the virtual environment, just type "deactivate" into the console/terminal.
