@@ -12,9 +12,21 @@ Clone the repository while in your desired directory/folder:
 git clone https://github.com/CrypticT1tan/roshambo.git
 ```
 
-You now have all the files needed to run the project.
+Navigate to the repository directory to begin using it.
 
 ## USAGE 🔧
+To run the game, run the following command while in the repository directory:
+
+MacOS:
+```bash
+python3 main.py
+```
+
+Windows:
+```bash
+python main.py
+```
+
 The rules work exactly the same as Rock-Paper-Scissors:
 - Rock 🪨 beats Scissors ✂️
 - Paper 📝 beats Rock 🪨
