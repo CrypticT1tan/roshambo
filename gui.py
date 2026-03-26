@@ -8,8 +8,9 @@ class GUI:
     def __init__(self):
         # Style Attributes
         self.font = "Calibri"
-        self.name_size = 30
-        self.choice_size = 50
+        self.name_size = 20
+        self.choice_size = 40
+        self.button_size = 40
         # Setup Root Window
         self.root = tk.Tk()
         self.root.title("Roshambo")
@@ -37,7 +38,7 @@ class GUI:
         screen_width = self.root.winfo_screenwidth()
         screen_height = self.root.winfo_screenheight()
         # Window dimensions
-        window_width = 480
+        window_width = 495
         window_height = 440
         # (x,y) starts at top left of window (0, 0)
         # x increases moving right, decreases moving left
@@ -63,7 +64,7 @@ class GUI:
         """
         text_frame = tk.Frame(self.root)
         text_frame.grid(row=0, column=0, columnspan=3)
-        self.game_text = tk.Label(text_frame, text=f"Best of {self.best_of}", font=(self.font, 40, "bold"), justify="center")
+        self.game_text = tk.Label(text_frame, text=f"Best of {self.best_of}", font=(self.font, 30, "bold"), justify="center")
         self.game_text.grid(row=0, column=0, columnspan=3)
 
     def setup_user_frame(self) -> None:
@@ -72,7 +73,7 @@ class GUI:
         """
         user_frame = tk.Frame(self.root, bd=10, relief="ridge")
         user_frame.grid(row=1, column=0)
-        user_label = tk.Label(user_frame, text="You", font=(self.font, 30, "bold"), justify="center")
+        user_label = tk.Label(user_frame, text="You", font=(self.font, 20, "bold"), justify="center")
         user_label.grid(row=0, column=0)
         self.user_score_label = tk.Label(user_frame, text=f"Score: {self.user_score}", font=(self.font, self.name_size), justify="center")
         self.user_score_label.grid(row=1, column=0)
@@ -85,7 +86,7 @@ class GUI:
         """
         vs_frame = tk.Frame(self.root)
         vs_frame.grid(row=1, column=1)
-        vs_label = tk.Label(vs_frame, text="VS", font=(self.font, 30, "bold"), justify="center")
+        vs_label = tk.Label(vs_frame, text="VS", font=(self.font, 20, "bold"), justify="center")
         vs_label.grid(row=0, column=0, padx=20)
 
     def setup_computer_frame(self) -> None:
@@ -96,7 +97,7 @@ class GUI:
         computer_frame.grid(row=1, column=2)
         computer_label = tk.Label(computer_frame, text="Computer", font=(self.font, self.name_size, "bold"), justify="center")
         computer_label.grid(row=0, column=0)
-        self.computer_score_label = tk.Label(computer_frame, text=f"Score: {self.computer_score}", font=(self.font, 30), justify="center")
+        self.computer_score_label = tk.Label(computer_frame, text=f"Score: {self.computer_score}", font=(self.font, 20), justify="center")
         self.computer_score_label.grid(row=1, column=0)
         self.computer_choice = tk.Label(computer_frame, text="", width=5, height=2, font=(self.font, self.choice_size, "bold"), justify="center")
         self.computer_choice.grid(row=2, column=0)
@@ -107,15 +108,15 @@ class GUI:
         """
         self.choice_frame = tk.Frame(self.root, bd=10, relief="groove")
         self.choice_frame.grid(row=2, column=0, columnspan=3, pady=10)
-        choice_text = tk.Label(self.choice_frame, text="Pick One:", font=(self.font, 30, "bold"), justify="center")
+        choice_text = tk.Label(self.choice_frame, text="Pick One:", font=(self.font, 20, "bold"), justify="center")
         choice_text.grid(row=0, column=0, columnspan=3)
-        rock_button = tk.Button(self.choice_frame, text=self.choices[0], font=(self.font, 50),
+        rock_button = tk.Button(self.choice_frame, text=self.choices[0], font=(self.font, self.button_size),
                                 command=lambda:self.update_score(self.choices[0]))
         rock_button.grid(row=1, column=0, padx=10, pady=2)
-        paper_button = tk.Button(self.choice_frame, text=self.choices[1], font=(self.font, 50),
+        paper_button = tk.Button(self.choice_frame, text=self.choices[1], font=(self.font, self.button_size),
                                  command=lambda:self.update_score(self.choices[1]))
         paper_button.grid(row=1, column=1, padx=10, pady=2)
-        scissors_button = tk.Button(self.choice_frame, text=self.choices[2], font=(self.font, 50),
+        scissors_button = tk.Button(self.choice_frame, text=self.choices[2], font=(self.font, self.button_size),
                                     command=lambda: self.update_score(self.choices[2]))
         scissors_button.grid(row=1, column=2, padx=10, pady=2)
 
